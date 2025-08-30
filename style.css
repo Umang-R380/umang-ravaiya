@@ -99,76 +99,50 @@ footer a {
   margin-top: 0;
 }
 
-/* ---- YOUTUBE FEATURE WITH HOVER OVERLAY ---- */
+/* ---- YouTube Feature with Horizontal Layout ---- */
 .feature-layout {
-  display: flex;
+  display: flex; /* This is the key to the side-by-side layout */
   align-items: center;
-  gap: 30px;
+  gap: 30px; /* Space between video and text */
 }
 
 .feature-video {
-  flex: 1.5;
-  position: relative; /* This is crucial for the overlay */
-  border-radius: 8px; /* Match iframe radius */
-  overflow: hidden; /* Keeps the overlay within the rounded corners */
+  flex: 1.5; /* Give video slightly more space */
 }
 
 .feature-video iframe {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  display: block; /* Removes any bottom spacing */
-  border: none;
-}
-
-.video-overlay {
-  position: absolute; /* Lays the div on top of the iframe */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  opacity: 0; /* Hidden by default */
-  transition: opacity 0.3s ease; /* Smooth fade effect */
-  pointer-events: none; /* Allows clicks to go through to the iframe */
-}
-
-.feature-video:hover .video-overlay {
-  opacity: 1; /* Makes the overlay visible on hover */
-}
-
-.video-overlay h3 {
-  color: #ffffff;
-  font-size: 1.5em;
-  margin: 0;
+  aspect-ratio: 16 / 9; /* Maintain 16:9 video aspect ratio */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: block;
 }
 
 .feature-text {
-  flex: 1;
+  flex: 1; /* Give text slightly less space */
   text-align: left;
+}
+
+.feature-text h3 {
+  margin-top: 0;
+  font-size: 1.5em;
 }
 
 .feature-text p {
   color: #555;
-  font-size: 1.1em;
+  font-size: 1em;
   margin-bottom: 20px;
-  margin-top: 0;
 }
 
 .button-group {
     display: flex;
-    gap: 10px;
+    gap: 10px; /* Space between buttons */
 }
 
 .subscribe-button, .view-channel-button {
     display: inline-block;
     padding: 10px 15px;
-    border-radius: 20px;
+    border-radius: 20px; /* Pill-shaped buttons */
     font-weight: bold;
     text-align: center;
     text-decoration: none;
@@ -176,7 +150,7 @@ footer a {
 }
 
 .subscribe-button {
-    background-color: #c4302b;
+    background-color: #c4302b; /* YouTube Red */
     color: #ffffff;
 }
 .subscribe-button:hover {
@@ -185,7 +159,7 @@ footer a {
 }
 
 .view-channel-button {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Light grey */
     color: #333;
     border: 1px solid #ccc;
 }
