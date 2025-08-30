@@ -1,66 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Umang Ravaiya</title>
-  <link rel="stylesheet" href="style.css">
+/* ---- Basic Setup & "Normie" Fonts ---- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8; /* A very light, soft grey background */
+  color: #333; /* Dark grey text is easier on the eyes than pure black */
+  margin: 0;
+  padding: 0;
+}
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+/* ---- Container for readable content ---- */
+.container {
+  max-width: 800px;
+  margin: 0 auto; /* This centers the container */
+  padding: 20px;
+}
 
-</head>
-<body>
+header, footer {
+  text-align: center;
+  background-color: #ffffff; /* White background for header and footer */
+  padding: 30px 10px;
+}
 
-  <header>
-    <div class="container">
-      <h1>Digital Dumpyard</h1>
-      <p>Hello!! This is Umang, 2nd Year Undergrad at IISc. I like Geometry and physics</p>
-    </div>
-  </header>
+h1, h2, h3 {
+  color: #2c3e50; /* A slightly softer, stylish dark blue */
+}
 
-  <main>
-    <section id="thoughts">
-      <div class="container">
-        <h2>My Thoughts</h2>
-        <article>
-          <h3>Opinions On Manifolds</h3>
-          <p class="date">August 30, 2025</p>
-          <p>Tangent Spaces are so Cool!!, Apparently you can abstract out what direction mean without ambient global euclidean structure, Peak Shit!!</p>
-        </article>
-        <article>
-          <h3>Thoughts On Watching Anime</h3>
-          <p class="date">July 9, 2025</p>
-          <p>Apothecary Diaries is So good, cant get over it.</p>
-        </article>
-      </div>
-    </section>
+section {
+  background-color: #ffffff; /* White background for content cards */
+  padding: 40px 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
 
-    <section id="files">
-      <div class="container">
-        <h2>Shared Files & Notes</h2>
-        <p>Here are some resources I've put together. Feel free to download them.</p>
-        <ul>
-          <li>
-            <a href="tangent_vector.pdf" target="_blank">My LaTeX Project (PDF)</a>
-            - This is my project that I update regularly.
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
+article {
+  border-bottom: 1px solid #eee; /* A line to separate your thoughts */
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
 
-  <footer>
-    <div class="container">
-      <p>
-        Find me on
-        <a href="https://github.com/Umang-R380" target="_blank">GitHub</a> |
-        <a href="https://x.com/umang417" target="_blank">Twitter</a> |
-        <a href="https://instagram.com/wertastip.49" target="_blank">Instagram</a>
-      </p>
-      <p>&copy; 2025 Umang</p>
-    </div>
-  </footer>
+/* Don't show a line after the last thought */
+article:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
 
-</body>
-</html>
+.date {
+  color: #888;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* ---- Styling the File Links ---- */
+ul {
+  list-style: none; /* Removes the default bullet points */
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+a {
+  color: #3498db; /* A nice, friendly blue for links */
+  text-decoration: none; /* Removes the underline by default */
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline; /* Adds the underline back when you hover over it */
+}
+
+footer a {
+  font-weight: normal;
+}
+
+/* ---- YouTube Feature Styles ---- */
+#youtube-feature .container {
+  text-align: center; /* Center all content in this section */
+}
+
+.video-thumbnail-link img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: block;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-thumbnail-link:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.video-description {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.channel-button {
+  display: inline-block;
+  background-color: #c4302b; /* YouTube Red */
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.channel-button:hover {
+  background-color: #a32722; /* Darker Red */
+  transform: translateY(-2px); /* Slight lift effect */
+  text-decoration: none;
+}
