@@ -2,147 +2,77 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f8f8f8; /* A very light, soft grey background */
-  color: #333; /* Dark grey text is easier on the eyes than pure black */
+  background-color: #f8f8f8;
+  color: #333;
   margin: 0;
   padding: 0;
 }
+/* ... keep all your other styles the same ... */
 
-/* ---- Container for readable content ---- */
-.container {
-  max-width: 800px;
-  margin: 0 auto; /* This centers the container */
-  padding: 20px;
-}
-
-header {
-  background-color: #ffffff; /* White background for header */
-  padding: 30px 10px;
-}
-
-footer {
-  text-align: center; /* Footer content centered */
-  background-color: #ffffff; /* White background for footer */
-  padding: 30px 10px;
-}
-
-h1, h2, h3 {
-  color: #2c3e50; /* A slightly softer, stylish dark blue */
-}
-
-section {
-  background-color: #ffffff; /* White background for content cards */
-  padding: 40px 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-article {
-  border-bottom: 1px solid #eee; /* A line to separate your thoughts */
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-
-/* Don't show a line after the last thought */
-article:last-of-type {
-  border-bottom: none;
-  margin-bottom: 0;
-}
-
-.date {
-  color: #888;
-  font-style: italic;
-  font-size: 0.9em;
-}
-
-/* ---- Styling the File Links ---- */
-ul {
-  list-style: none; /* Removes the default bullet points */
-  padding: 0;
-}
-
-li {
-  margin-bottom: 15px;
-}
-
-a {
-  color: #3498db; /* A nice, friendly blue for links */
-  text-decoration: none; /* Removes the underline by default */
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline; /* Adds the underline back when you hover over it */
-}
-
-footer a {
-  font-weight: normal;
-}
-
-/* ---- Profile Header Styles (Restored) ---- */
+/* ---- Profile Header Styles ---- */
 .profile-header {
-  display: flex; /* This is the key to placing items side-by-side */
-  align-items: center; /* This vertically aligns the picture and text */
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.profile-text h1 {
+  margin-top: 0;
+}
+
+/* ---- REVISED YouTube Feature Styles ---- */
+.feature-layout {
+  display: flex; /* This creates the side-by-side layout */
+  align-items: center; /* Vertically aligns the content */
+  gap: 40px; /* Creates a nice space between the image and text */
+}
+
+.feature-video {
+  flex: 1; /* Allows the video column to take up available space */
+  min-width: 0;
+}
+
+.feature-text {
+  flex: 1; /* Allows the text column to take up available space */
   text-align: left; /* Aligns the text to the left */
 }
 
-.profile-picture {
-  width: 150px; /* Set the size of your profile picture */
-  height: 150px;
-  border-radius: 50%; /* This makes the image a circle */
-  object-fit: cover; /* Prevents the image from being stretched or squashed */
-  margin-right: 30px; /* Adds some space between the picture and the text */
-  border: 4px solid #fff; /* Optional: Adds a nice white border */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
-}
-
-.profile-text h1 {
-  margin-top: 0; /* Removes extra space above your main title */
-}
-
-
-/* ---- YouTube Feature Styles ---- */
-#youtube-feature .container {
-  text-align: center; /* Center all content in this section */
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
 .video-thumbnail-link img {
-  max-width: 640px; /* Maximum width for the video thumbnail */
-  width: 100%; /* Ensures it scales down on smaller screens */
-  height: auto; /* Maintains aspect ratio */
+  width: 100%;
+  height: auto;
   border-radius: 12px;
-  margin: 0 auto 20px auto; /* Center image and add bottom margin */
   display: block;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .video-thumbnail-link:hover img {
-  transform: scale(1.02);
+  transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.video-description {
-  font-size: 1.1em;
-  color: #555;
-  margin-bottom: 25px;
 }
 
 .channel-button {
   display: inline-block;
-  background-color: #c4302b; /* YouTube Red */
+  background-color: #c4302b;
   color: #ffffff;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: 10px;
 }
 
 .channel-button:hover {
-  background-color: #a32722; /* Darker Red */
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #a32722;
+  transform: translateY(-2px);
   text-decoration: none;
 }
