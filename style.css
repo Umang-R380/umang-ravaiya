@@ -7,7 +7,76 @@ body {
   margin: 0;
   padding: 0;
 }
-/* ... keep all your other styles the same ... */
+
+/* ---- Container for readable content ---- */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 30px 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px 10px;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 40px 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+article {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+article:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.date {
+  color: #888;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* ---- Styling the File Links ---- */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer a {
+  font-weight: normal;
+}
 
 /* ---- Profile Header Styles ---- */
 .profile-header {
@@ -15,6 +84,7 @@ body {
   align-items: center;
   text-align: left;
 }
+
 .profile-picture {
   width: 150px;
   height: 150px;
@@ -24,55 +94,75 @@ body {
   border: 4px solid #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 .profile-text h1 {
   margin-top: 0;
 }
 
-/* ---- REVISED YouTube Feature Styles ---- */
+/* ---- REVISED YouTube Embed Styles ---- */
 .feature-layout {
-  display: flex; /* This creates the side-by-side layout */
-  align-items: center; /* Vertically aligns the content */
-  gap: 40px; /* Creates a nice space between the image and text */
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Space between video and text */
 }
 
 .feature-video {
-  flex: 1; /* Allows the video column to take up available space */
-  min-width: 0;
+  flex: 1.5; /* Give video slightly more space */
+}
+
+.feature-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Maintain 16:9 video aspect ratio */
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
 .feature-text {
-  flex: 1; /* Allows the text column to take up available space */
-  text-align: left; /* Aligns the text to the left */
+  flex: 1; /* Give text slightly less space */
+  text-align: left;
 }
 
-.video-thumbnail-link img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.feature-text h3 {
+  margin-top: 0;
+  font-size: 1.5em;
 }
 
-.video-thumbnail-link:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+.feature-text p {
+  color: #555;
+  font-size: 1em;
+  margin-bottom: 20px;
 }
 
-.channel-button {
-  display: inline-block;
-  background-color: #c4302b;
-  color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  margin-top: 10px;
+.button-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
 }
 
-.channel-button:hover {
-  background-color: #a32722;
-  transform: translateY(-2px);
-  text-decoration: none;
+.subscribe-button, .view-channel-button {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px; /* Pill-shaped buttons */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.subscribe-button {
+    background-color: #c4302b; /* YouTube Red */
+    color: #ffffff;
+}
+.subscribe-button:hover {
+    background-color: #a32722;
+    text-decoration: none;
+}
+
+.view-channel-button {
+    background-color: #f0f0f0; /* Light grey */
+    color: #333;
+    border: 1px solid #ccc;
+}
+.view-channel-button:hover {
+    background-color: #e0e0e0;
+    text-decoration: none;
 }
