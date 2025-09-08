@@ -2,8 +2,8 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  background-color: #eef2f6; /* A very light, soft bluish-grey */
-  color: #333;
+  background-color: #121212; /* Main dark background */
+  color: #e0e0e0; /* Main light text color */
   margin: 0;
   padding: 0;
 }
@@ -16,29 +16,31 @@ body {
 }
 
 header {
-  background-color: #ffffff;
+  background-color: #1e1e1e; /* Darker card background */
   padding: 30px 10px;
 }
 
 footer {
   text-align: center;
-  background-color: #ffffff;
+  background-color: #1e1e1e; /* Darker card background */
   padding: 30px 10px;
 }
 
 h1, h2, h3 {
-  color: #2c3e50;
+  color: #ffffff; /* Bright white for headings */
 }
 
 section {
-  background-color: #ffffff; /* White background for content cards */
+  background-color: #1e1e1e; /* Darker card background for content */
   padding: 40px 10px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: none; /* Remove shadow, not needed in dark mode */
+  border: 1px solid #333; /* Add a subtle border instead */
+  border-radius: 8px; /* Optional: Add rounded corners to sections */
 }
 
 article {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #444; /* Darker separator line */
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
@@ -65,7 +67,7 @@ li {
 }
 
 a {
-  color: #3498db;
+  color: #58a6ff; /* A nice, accessible blue for links in dark mode */
   text-decoration: none;
   font-weight: bold;
 }
@@ -91,7 +93,7 @@ footer a {
   border-radius: 50%;
   object-fit: cover;
   margin-right: 30px;
-  border: 4px solid #fff;
+  border: 4px solid #333; /* Darker border for the pfp */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -114,7 +116,7 @@ footer a {
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid #444; /* Darker border for the video */
   display: block;
 }
 
@@ -129,7 +131,7 @@ footer a {
 }
 
 .feature-text p {
-  color: #555;
+  color: #aaa; /* Lighter grey for description text */
   font-size: 1em;
   margin-bottom: 20px;
 }
@@ -159,11 +161,11 @@ footer a {
 }
 
 .view-channel-button {
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ccc;
+    background-color: #333; /* Dark button background */
+    color: #eee; /* Light button text */
+    border: 1px solid #555;
 }
 .view-channel-button:hover {
-    background-color: #e0e0e0;
+    background-color: #444;
     text-decoration: none;
 }
