@@ -3,7 +3,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   background-color: #121212; /* Main dark background */
-  color: #e0e0e0; /* Main light text color */
+  color: #e0e0e0;
   margin: 0;
   padding: 0;
 }
@@ -16,45 +16,80 @@ body {
 }
 
 header {
-  background-color: #1e1e1e; /* Darker card background */
+  background-color: #1e1e1e;
   padding: 30px 10px;
 }
 
 footer {
   text-align: center;
-  background-color: #1e1e1e; /* Darker card background */
+  background-color: #1e1e1e;
   padding: 30px 10px;
 }
 
 h1, h2, h3 {
-  color: #ffffff; /* Bright white for headings */
+  color: #ffffff;
 }
 
 section {
-  background-color: #1e1e1e; /* Darker card background for content */
+  background-color: #1e1e1e;
   padding: 40px 10px;
   margin-bottom: 20px;
-  box-shadow: none; /* Remove shadow, not needed in dark mode */
-  border: 1px solid #333; /* Add a subtle border instead */
-  border-radius: 8px; /* Optional: Add rounded corners to sections */
+  border: 1px solid #333;
+  border-radius: 8px;
 }
 
-article {
-  border-bottom: 1px solid #444; /* Darker separator line */
-  padding-bottom: 20px;
+/* ---- NEW BLOG POST CARD STYLES ---- */
+.blog-post-card {
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: border-color 0.2s ease;
+}
+
+.blog-post-card:hover {
+  border-color: #58a6ff;
+}
+
+.post-tag {
+  display: inline-block;
+  background-color: #333;
+  color: #e0e0e0;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.blog-post-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.post-excerpt {
+  color: #aaa;
   margin-bottom: 20px;
 }
 
-article:last-of-type {
-  border-bottom: none;
-  margin-bottom: 0;
+/* ---- REVISED "READ MORE" BUTTON STYLE ---- */
+.read-more-link {
+  display: inline-block;
+  font-weight: bold;
+  color: #58a6ff;
+  border: 1px solid #58a6ff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-.date {
-  color: #888;
-  font-style: italic;
-  font-size: 0.9em;
+.read-more-link:hover {
+  background-color: #58a6ff;
+  color: #1e1e1e; /* Change text color for contrast */
+  text-decoration: none;
 }
+
 
 /* ---- Styling the File Links ---- */
 ul {
@@ -67,7 +102,7 @@ li {
 }
 
 a {
-  color: #58a6ff; /* A nice, accessible blue for links in dark mode */
+  color: #58a6ff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -93,7 +128,7 @@ footer a {
   border-radius: 50%;
   object-fit: cover;
   margin-right: 30px;
-  border: 4px solid #333; /* Darker border for the pfp */
+  border: 4px solid #333;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -116,7 +151,7 @@ footer a {
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 8px;
-  border: 1px solid #444; /* Darker border for the video */
+  border: 1px solid #444;
   display: block;
 }
 
@@ -131,7 +166,7 @@ footer a {
 }
 
 .feature-text p {
-  color: #aaa; /* Lighter grey for description text */
+  color: #aaa;
   font-size: 1em;
   margin-bottom: 20px;
 }
@@ -161,8 +196,8 @@ footer a {
 }
 
 .view-channel-button {
-    background-color: #333; /* Dark button background */
-    color: #eee; /* Light button text */
+    background-color: #333;
+    color: #eee;
     border: 1px solid #555;
 }
 .view-channel-button:hover {
