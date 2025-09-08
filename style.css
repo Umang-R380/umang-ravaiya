@@ -204,3 +204,36 @@ footer a {
     background-color: #444;
     text-decoration: none;
 }
+
+/* ---- STYLES FOR FULL BLOG POST PAGE ---- */
+.post-meta {
+  color: #888;
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: -15px;
+  margin-bottom: 30px;
+}
+
+.full-post-content p {
+  line-height: 1.7;
+  color: #c0c0c0; /* Slightly lighter text for readability */
+  margin-bottom: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 40px;
+  font-weight: bold;
+  color: #58a6ff;
+  border: 1px solid #58a6ff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #58a6ff;
+  color: #1e1e1e;
+  text-decoration: none;
+}
