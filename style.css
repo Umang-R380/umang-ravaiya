@@ -34,31 +34,36 @@ body{
 
 nav{
     display:flex;
-    justify-content:flex-end;
-    gap:30px;
-    padding:30px 0;
+    justify-content:center;
+    gap:48px;          /* more spacing */
+    padding:32px 0;
+    margin-bottom:60px;
 }
 
 nav a{
-    color:#cfcfcf;
-    text-decoration:none;
+    font-size:1.1rem;
     font-weight:500;
-    transition:.25s;
+    color:#d5d5d5;
 }
 
 nav a:hover{
-    color:#ffffff;
+    color:white;
 }
-
 /* ---------------------------
    HERO
 ----------------------------*/
 
 .hero{
+
     display:flex;
+
     align-items:center;
-    gap:60px;
-    padding:80px 0;
+
+    gap:70px;
+
+    min-height:75vh;
+
+    padding:60px 0;
 }
 
 .profile-picture{
